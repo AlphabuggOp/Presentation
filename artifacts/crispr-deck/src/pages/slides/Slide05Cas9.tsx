@@ -7,7 +7,7 @@ export default function Slide05Cas9() {
 
       {/* Floating scissors */}
       <div
-        className="absolute left-1/2 top-[44%] -translate-x-1/2 -translate-y-1/2 w-[34vw] h-[34vw]"
+        className="absolute left-1/2 top-[44%] -translate-x-1/2 -translate-y-1/2 w-[44vw] h-[44vw]"
         style={{ animation: "morph-in 1.4s cubic-bezier(.2,.7,.2,1) both" }}
       >
         <div className="w-full h-full" style={{ animation: "float-y 4s ease-in-out 1.4s infinite" }}>
