@@ -52,13 +52,6 @@ export default function Slide10Designer() {
         ))}
       </div>
 
-      <div className="absolute bottom-[8vh] left-[6vw] right-[6vw] flex items-center justify-between z-20"
-           style={{ animation: "vanish-up 1s ease-out 1.3s both" }}>
-        <div className="font-mono text-[0.85vw] text-muted uppercase tracking-[0.3em]">Mnemonic</div>
-        <div className="font-display font-bold text-[2.4vw]">
-          <span className="text-primary">EDIT</span> = Enhance · Design · Improve · Traits
-        </div>
-      </div>
     </div>
   );
 }
