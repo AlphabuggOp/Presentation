@@ -1,110 +1,5 @@
-import { useEffect, useState } from "react";
 import { SlideChrome } from "@/components/SlideChrome";
-
-function DoubleHelix() {
-  const [phase, setPhase] = useState(0);
-  useEffect(() => {
-    let raf = 0;
-    const start = performance.now();
-    const tick = (t: number) => {
-      setPhase(((t - start) / 1000) * 1.4);
-      raf = requestAnimationFrame(tick);
-    };
-    raf = requestAnimationFrame(tick);
-    return () => cancelAnimationFrame(raf);
-  }, []);
-
-  const RUNGS = 26;
-  const TURNS = 2.2;
-  const cx = 200;
-  const amp = 110;
-  const yTop = 30;
-  const yBottom = 370;
-
-  const rungs = Array.from({ length: RUNGS }).map((_, i) => {
-    const t = i / (RUNGS - 1);
-    const y = yTop + t * (yBottom - yTop);
-    const angle = t * Math.PI * 2 * TURNS + phase;
-    const x1 = cx + Math.sin(angle) * amp;
-    const x2 = cx - Math.sin(angle) * amp;
-    const depth = Math.cos(angle);
-    return { i, y, x1, x2, depth };
-  });
-
-  return (
-    <svg viewBox="0 0 400 400" className="w-full h-full">
-      <defs>
-        <linearGradient id="strandA" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#b14dff" stopOpacity="0.2" />
-          <stop offset="50%" stopColor="#b14dff" stopOpacity="1" />
-          <stop offset="100%" stopColor="#b14dff" stopOpacity="0.2" />
-        </linearGradient>
-        <linearGradient id="strandB" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#ffffff" stopOpacity="0.2" />
-          <stop offset="50%" stopColor="#ffffff" stopOpacity="1" />
-          <stop offset="100%" stopColor="#ffffff" stopOpacity="0.2" />
-        </linearGradient>
-        <radialGradient id="nodeGlow">
-          <stop offset="0%" stopColor="#b14dff" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="#b14dff" stopOpacity="0" />
-        </radialGradient>
-      </defs>
-
-      {/* backbone strand A (cyan) */}
-      <path
-        d={rungs.map((r, i) => `${i === 0 ? "M" : "L"} ${r.x1.toFixed(2)} ${r.y.toFixed(2)}`).join(" ")}
-        fill="none"
-        stroke="url(#strandA)"
-        strokeWidth="3"
-        strokeLinecap="round"
-        style={{ filter: "drop-shadow(0 0 8px #b14dff)" }}
-      />
-      {/* backbone strand B (white) */}
-      <path
-        d={rungs.map((r, i) => `${i === 0 ? "M" : "L"} ${r.x2.toFixed(2)} ${r.y.toFixed(2)}`).join(" ")}
-        fill="none"
-        stroke="url(#strandB)"
-        strokeWidth="3"
-        strokeLinecap="round"
-        style={{ filter: "drop-shadow(0 0 6px #ffffff)" }}
-      />
-
-      {/* rungs (base pairs) — opacity & width by depth so back-of-helix recedes */}
-      {rungs.map((r) => {
-        const front = (r.depth + 1) / 2;
-        const opacity = 0.18 + front * 0.6;
-        const width = 1.2 + front * 1.6;
-        return (
-          <line
-            key={`rung-${r.i}`}
-            x1={r.x1}
-            y1={r.y}
-            x2={r.x2}
-            y2={r.y}
-            stroke="#b14dff"
-            strokeWidth={width}
-            opacity={opacity}
-          />
-        );
-      })}
-
-      {/* nodes — bigger & brighter when in front */}
-      {rungs.map((r) => {
-        const frontA = (Math.cos(r.i / (RUNGS - 1) * Math.PI * 2 * TURNS + phase) + 1) / 2;
-        const frontB = 1 - frontA;
-        const radiusA = 2.2 + frontA * 3.2;
-        const radiusB = 2.2 + frontB * 3.2;
-        return (
-          <g key={`nodes-${r.i}`}>
-            <circle cx={r.x1} cy={r.y} r={radiusA + 6} fill="url(#nodeGlow)" opacity={frontA * 0.7} />
-            <circle cx={r.x1} cy={r.y} r={radiusA} fill="#b14dff" opacity={0.5 + frontA * 0.5} />
-            <circle cx={r.x2} cy={r.y} r={radiusB} fill="#ffffff" opacity={0.5 + frontB * 0.5} />
-          </g>
-        );
-      })}
-    </svg>
-  );
-}
+import dnaImage from "@assets/IMG_1216_1777180879074.jpeg";
 
 export default function Slide01Title() {
   return (
@@ -112,17 +7,30 @@ export default function Slide01Title() {
       <SlideChrome index="01" />
 
       <div
-        className="absolute -right-[14vw] top-1/2 w-[78vw] h-[78vw] pointer-events-none"
+        className="absolute -right-[10vw] top-1/2 w-[72vw] h-[72vw] pointer-events-none"
         style={{
-          transform: "translateY(-50%) rotate(22deg)",
+          transform: "translateY(-50%) rotate(18deg)",
           transformOrigin: "60% 50%",
         }}
       >
         <div
           className="w-full h-full"
-          style={{ animation: "morph-in 1.2s cubic-bezier(.2,.7,.2,1) both" }}
+          style={{ animation: "morph-in 1.4s cubic-bezier(.2,.7,.2,1) both" }}
         >
-          <DoubleHelix />
+          <div
+            className="w-full h-full"
+            style={{ animation: "float-y 6s ease-in-out infinite" }}
+          >
+            <img
+              src={dnaImage}
+              alt="DNA double helix"
+              className="w-full h-full object-contain"
+              style={{
+                mixBlendMode: "lighten",
+                filter: "brightness(1.1) contrast(1.4) saturate(1.15)",
+              }}
+            />
+          </div>
         </div>
       </div>
 
