@@ -126,6 +126,16 @@ body {
   60% { transform: rotate(-18deg); }
   100% { transform: rotate(-12deg); }
 }
+@keyframes scissor-upper {
+  0%   { transform: rotate(-14deg); }
+  55%  { transform: rotate(4deg); }
+  100% { transform: rotate(0deg); }
+}
+@keyframes scissor-lower {
+  0%   { transform: rotate(14deg); }
+  55%  { transform: rotate(-4deg); }
+  100% { transform: rotate(0deg); }
+}
 @keyframes butterfly {
   0%, 100% { transform: translate(0,0) rotate(0); }
   25% { transform: translate(8vw,-4vh) rotate(8deg); }

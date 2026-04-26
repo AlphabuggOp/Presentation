@@ -13,25 +13,37 @@ export default function Slide05Cas9() {
         <div className="w-full h-full" style={{ animation: "float-y 4s ease-in-out 1.4s infinite" }}>
           <svg viewBox="0 0 400 400" className="w-full h-full" style={{ filter: "drop-shadow(0 0 30px #b14dff)" }}>
             <defs>
-              <linearGradient id="bladeG" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#ffffff" />
+              <linearGradient id="bladeG" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#7a2dc4" />
+                <stop offset="50%" stopColor="#e9c8ff" />
+                <stop offset="100%" stopColor="#ffffff" />
+              </linearGradient>
+              <linearGradient id="handleG" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="#3a0a5a" />
                 <stop offset="100%" stopColor="#b14dff" />
               </linearGradient>
             </defs>
-            {/* Pivot */}
-            <circle cx="200" cy="200" r="14" fill="#07030f" stroke="#b14dff" strokeWidth="3" />
-            {/* Upper blade */}
-            <g style={{ transformOrigin: "200px 200px", animation: "tilt-left 2s cubic-bezier(.4,.1,.3,1) 1.6s both" }}>
-              <path d="M200 200 L370 70 L390 90 L210 220 Z" fill="url(#bladeG)" stroke="#b14dff" strokeWidth="2" />
-              <circle cx="120" cy="280" r="48" fill="none" stroke="#b14dff" strokeWidth="6" />
-              <line x1="200" y1="200" x2="155" y2="240" stroke="#b14dff" strokeWidth="6" />
+
+            {/* Upper scissor half: blade goes up-right, handle ring at lower-left */}
+            <g style={{ transformOrigin: "200px 200px", animation: "scissor-upper 2.2s cubic-bezier(.4,.1,.3,1) 1.4s both" }}>
+              {/* Handle arm from pivot down-left */}
+              <line x1="200" y1="200" x2="118" y2="282" stroke="url(#handleG)" strokeWidth="16" strokeLinecap="round" />
+              {/* Handle ring */}
+              <circle cx="92" cy="308" r="34" fill="none" stroke="#b14dff" strokeWidth="14" />
+              {/* Blade — tapered triangle from pivot to upper-right tip */}
+              <path d="M196 194 L380 65 L205 207 Z" fill="url(#bladeG)" stroke="#b14dff" strokeWidth="1.5" />
             </g>
-            {/* Lower blade */}
-            <g style={{ transformOrigin: "200px 200px", animation: "tilt-left 2s cubic-bezier(.4,.1,.3,1) 1.6s both", animationDirection: "reverse" }}>
-              <path d="M200 200 L370 330 L390 310 L210 180 Z" fill="url(#bladeG)" stroke="#b14dff" strokeWidth="2" />
-              <circle cx="120" cy="120" r="48" fill="none" stroke="#b14dff" strokeWidth="6" />
-              <line x1="200" y1="200" x2="155" y2="160" stroke="#b14dff" strokeWidth="6" />
+
+            {/* Lower scissor half: blade goes down-right, handle ring at upper-left */}
+            <g style={{ transformOrigin: "200px 200px", animation: "scissor-lower 2.2s cubic-bezier(.4,.1,.3,1) 1.4s both" }}>
+              <line x1="200" y1="200" x2="118" y2="118" stroke="url(#handleG)" strokeWidth="16" strokeLinecap="round" />
+              <circle cx="92" cy="92" r="34" fill="none" stroke="#b14dff" strokeWidth="14" />
+              <path d="M195 207 L380 335 L205 194 Z" fill="url(#bladeG)" stroke="#b14dff" strokeWidth="1.5" />
             </g>
+
+            {/* Pivot screw — drawn last so it sits on top */}
+            <circle cx="200" cy="200" r="11" fill="#1a0a2e" stroke="#b14dff" strokeWidth="3" />
+            <circle cx="200" cy="200" r="3" fill="#b14dff" />
           </svg>
         </div>
       </div>
