@@ -11,26 +11,26 @@ export default function Slide05Cas9() {
         style={{ animation: "morph-in 1.4s cubic-bezier(.2,.7,.2,1) both" }}
       >
         <div className="w-full h-full" style={{ animation: "float-y 4s ease-in-out 1.4s infinite" }}>
-          <svg viewBox="0 0 400 400" className="w-full h-full" style={{ filter: "drop-shadow(0 0 30px #00f0ff)" }}>
+          <svg viewBox="0 0 400 400" className="w-full h-full" style={{ filter: "drop-shadow(0 0 30px #b14dff)" }}>
             <defs>
               <linearGradient id="bladeG" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="100%" stopColor="#00f0ff" />
+                <stop offset="100%" stopColor="#b14dff" />
               </linearGradient>
             </defs>
             {/* Pivot */}
-            <circle cx="200" cy="200" r="14" fill="#060a1f" stroke="#00f0ff" strokeWidth="3" />
+            <circle cx="200" cy="200" r="14" fill="#07030f" stroke="#b14dff" strokeWidth="3" />
             {/* Upper blade */}
             <g style={{ transformOrigin: "200px 200px", animation: "tilt-left 2s cubic-bezier(.4,.1,.3,1) 1.6s both" }}>
-              <path d="M200 200 L370 70 L390 90 L210 220 Z" fill="url(#bladeG)" stroke="#00f0ff" strokeWidth="2" />
-              <circle cx="120" cy="280" r="48" fill="none" stroke="#00f0ff" strokeWidth="6" />
-              <line x1="200" y1="200" x2="155" y2="240" stroke="#00f0ff" strokeWidth="6" />
+              <path d="M200 200 L370 70 L390 90 L210 220 Z" fill="url(#bladeG)" stroke="#b14dff" strokeWidth="2" />
+              <circle cx="120" cy="280" r="48" fill="none" stroke="#b14dff" strokeWidth="6" />
+              <line x1="200" y1="200" x2="155" y2="240" stroke="#b14dff" strokeWidth="6" />
             </g>
             {/* Lower blade */}
             <g style={{ transformOrigin: "200px 200px", animation: "tilt-left 2s cubic-bezier(.4,.1,.3,1) 1.6s both", animationDirection: "reverse" }}>
-              <path d="M200 200 L370 330 L390 310 L210 180 Z" fill="url(#bladeG)" stroke="#00f0ff" strokeWidth="2" />
-              <circle cx="120" cy="120" r="48" fill="none" stroke="#00f0ff" strokeWidth="6" />
-              <line x1="200" y1="200" x2="155" y2="160" stroke="#00f0ff" strokeWidth="6" />
+              <path d="M200 200 L370 330 L390 310 L210 180 Z" fill="url(#bladeG)" stroke="#b14dff" strokeWidth="2" />
+              <circle cx="120" cy="120" r="48" fill="none" stroke="#b14dff" strokeWidth="6" />
+              <line x1="200" y1="200" x2="155" y2="160" stroke="#b14dff" strokeWidth="6" />
             </g>
           </svg>
         </div>

@@ -49,7 +49,7 @@ export function SlideChrome({ index, total = "15", children }: ChromeProps) {
               style={{
                 animation: "number-crush 0.55s cubic-bezier(.55,.05,.7,.2) both",
                 transformOrigin: "50% 100%",
-                textShadow: "0 0 12px #00f0ff",
+                textShadow: "0 0 12px #b14dff",
               }}
             >
               {previousRef.current}
@@ -62,7 +62,7 @@ export function SlideChrome({ index, total = "15", children }: ChromeProps) {
               animation: "number-bounce 0.85s cubic-bezier(.34,1.56,.64,1) both",
               animationDelay: showCrush && previousRef.current ? "0.25s" : "0s",
               transformOrigin: "50% 100%",
-              textShadow: "0 0 14px #00f0ff",
+              textShadow: "0 0 14px #b14dff",
             }}
           >
             {index}

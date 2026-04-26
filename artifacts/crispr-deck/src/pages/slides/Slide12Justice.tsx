@@ -17,27 +17,27 @@ export default function Slide12Justice() {
       {/* Tipping scale */}
       <div className="absolute left-1/2 -translate-x-1/2 top-[42vh] w-[55vw]"
            style={{ animation: "morph-in 1.3s cubic-bezier(.2,.7,.2,1) both" }}>
-        <svg viewBox="0 0 800 380" className="w-full" style={{ filter: "drop-shadow(0 0 20px rgba(0,240,255,0.4))" }}>
+        <svg viewBox="0 0 800 380" className="w-full" style={{ filter: "drop-shadow(0 0 20px rgba(177,77,255,0.4))" }}>
           {/* Stand */}
-          <rect x="395" y="80" width="10" height="280" fill="#00f0ff" />
-          <rect x="350" y="350" width="100" height="14" fill="#00f0ff" />
-          <circle cx="400" cy="80" r="14" fill="#00f0ff" />
+          <rect x="395" y="80" width="10" height="280" fill="#b14dff" />
+          <rect x="350" y="350" width="100" height="14" fill="#b14dff" />
+          <circle cx="400" cy="80" r="14" fill="#b14dff" />
 
           {/* Tilted beam */}
           <g style={{ transformOrigin: "400px 80px", transform: "rotate(-12deg)", animation: "tilt-left 1.6s cubic-bezier(.4,.1,.3,1) 0.6s both" }}>
-            <line x1="120" y1="80" x2="680" y2="80" stroke="#00f0ff" strokeWidth="6" />
+            <line x1="120" y1="80" x2="680" y2="80" stroke="#b14dff" strokeWidth="6" />
 
             {/* Left pan: lab coat */}
-            <line x1="160" y1="80" x2="160" y2="160" stroke="#00f0ff" strokeWidth="2" />
-            <path d="M80 170 Q160 200 240 170 L220 200 Q160 215 100 200 Z" fill="rgba(0,240,255,0.2)" stroke="#00f0ff" strokeWidth="3" />
+            <line x1="160" y1="80" x2="160" y2="160" stroke="#b14dff" strokeWidth="2" />
+            <path d="M80 170 Q160 200 240 170 L220 200 Q160 215 100 200 Z" fill="rgba(177,77,255,0.2)" stroke="#b14dff" strokeWidth="3" />
             <g transform="translate(125 130)">
               <path d="M0 0 L70 0 L60 -30 L40 -10 L30 -10 L10 -30 Z" fill="#ffffff" />
               <circle cx="35" cy="-30" r="14" fill="#ffffff" />
             </g>
 
             {/* Right pan: gavel */}
-            <line x1="640" y1="80" x2="640" y2="160" stroke="#00f0ff" strokeWidth="2" />
-            <path d="M560 170 Q640 200 720 170 L700 200 Q640 215 580 200 Z" fill="rgba(0,240,255,0.2)" stroke="#00f0ff" strokeWidth="3" />
+            <line x1="640" y1="80" x2="640" y2="160" stroke="#b14dff" strokeWidth="2" />
+            <path d="M560 170 Q640 200 720 170 L700 200 Q640 215 580 200 Z" fill="rgba(177,77,255,0.2)" stroke="#b14dff" strokeWidth="3" />
             <g transform="translate(595 110) rotate(-15)">
               <rect x="0" y="0" width="80" height="30" rx="4" fill="#ffffff" />
               <rect x="32" y="30" width="14" height="50" fill="#ffffff" />

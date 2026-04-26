@@ -11,15 +11,15 @@ export default function Slide09Mosquito() {
         {/* Mosquito */}
         <div className="absolute inset-0 flex items-center justify-center"
              style={{ animation: "scale-out 1.4s ease-in 1.6s forwards" }}>
-          <svg viewBox="0 0 400 400" className="w-[70%] h-[70%]" style={{ filter: "drop-shadow(0 0 20px #00f0ff)" }}>
+          <svg viewBox="0 0 400 400" className="w-[70%] h-[70%]" style={{ filter: "drop-shadow(0 0 20px #b14dff)" }}>
             {/* Body */}
-            <ellipse cx="200" cy="220" rx="22" ry="55" fill="#00f0ff" />
+            <ellipse cx="200" cy="220" rx="22" ry="55" fill="#b14dff" />
             <circle cx="200" cy="160" r="26" fill="#ffffff" />
             {/* Proboscis */}
-            <line x1="200" y1="160" x2="200" y2="100" stroke="#00f0ff" strokeWidth="3" />
+            <line x1="200" y1="160" x2="200" y2="100" stroke="#b14dff" strokeWidth="3" />
             {/* Wings */}
-            <ellipse cx="155" cy="190" rx="50" ry="20" fill="rgba(0,240,255,0.5)" transform="rotate(-25 155 190)" />
-            <ellipse cx="245" cy="190" rx="50" ry="20" fill="rgba(0,240,255,0.5)" transform="rotate(25 245 190)" />
+            <ellipse cx="155" cy="190" rx="50" ry="20" fill="rgba(177,77,255,0.5)" transform="rotate(-25 155 190)" />
+            <ellipse cx="245" cy="190" rx="50" ry="20" fill="rgba(177,77,255,0.5)" transform="rotate(25 245 190)" />
             {/* Legs */}
             {[-1, 0, 1].map((i) => (
               <g key={i}>
@@ -37,8 +37,8 @@ export default function Slide09Mosquito() {
         <div className="absolute inset-0 flex items-center justify-center opacity-0"
              style={{ animation: "scale-in 1s cubic-bezier(.2,.7,.2,1) 1.7s forwards" }}>
           <div className="relative w-[60%] aspect-square">
-            <div className="absolute inset-0 rounded-full border-[1.2vw] border-primary cyan-shadow" style={{ boxShadow: "0 0 60px #00f0ff" }} />
-            <div className="absolute top-1/2 left-[6%] right-[6%] h-[1.2vw] bg-primary -translate-y-1/2 rotate-45 origin-center" style={{ boxShadow: "0 0 30px #00f0ff" }} />
+            <div className="absolute inset-0 rounded-full border-[1.2vw] border-primary cyan-shadow" style={{ boxShadow: "0 0 60px #b14dff" }} />
+            <div className="absolute top-1/2 left-[6%] right-[6%] h-[1.2vw] bg-primary -translate-y-1/2 rotate-45 origin-center" style={{ boxShadow: "0 0 30px #b14dff" }} />
           </div>
         </div>
       </div>

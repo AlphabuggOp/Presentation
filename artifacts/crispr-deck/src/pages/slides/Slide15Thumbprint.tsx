@@ -33,11 +33,11 @@ export default function Slide15Thumbprint() {
         className="absolute left-1/2 top-[48%] -translate-x-1/2 -translate-y-1/2 w-[55vh] h-[55vh]"
         style={{ animation: "morph-zoom 2.4s cubic-bezier(.2,.7,.2,1) both" }}
       >
-        <svg viewBox="0 0 400 480" className="w-full h-full" style={{ filter: "drop-shadow(0 0 30px #00f0ff)" }}>
+        <svg viewBox="0 0 400 480" className="w-full h-full" style={{ filter: "drop-shadow(0 0 30px #b14dff)" }}>
           <defs>
             <radialGradient id="starG" cx="50%" cy="50%" r="50%">
               <stop offset="0%" stopColor="#ffffff" />
-              <stop offset="100%" stopColor="#00f0ff" />
+              <stop offset="100%" stopColor="#b14dff" />
             </radialGradient>
           </defs>
           {/* Concentric thumbprint loops as dotted ovals */}
@@ -72,8 +72,8 @@ export default function Slide15Thumbprint() {
             );
           })}
           {/* A few cross-curves to look like ridges */}
-          <path d="M150 180 Q200 160 250 180" stroke="#00f0ff" strokeWidth="1" fill="none" opacity="0.4" />
-          <path d="M140 280 Q200 300 260 280" stroke="#00f0ff" strokeWidth="1" fill="none" opacity="0.4" />
+          <path d="M150 180 Q200 160 250 180" stroke="#b14dff" strokeWidth="1" fill="none" opacity="0.4" />
+          <path d="M140 280 Q200 300 260 280" stroke="#b14dff" strokeWidth="1" fill="none" opacity="0.4" />
         </svg>
       </div>
 

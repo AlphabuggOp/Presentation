@@ -23,16 +23,16 @@ export default function Slide03Library() {
                       height: `${h}%`,
                       background:
                         fly
-                          ? "linear-gradient(180deg, #00f0ff, #0a1030)"
-                          : "linear-gradient(180deg, #0a1030, #060a1f)",
-                      borderTop: fly ? "2px solid #00f0ff" : "1px solid rgba(0,240,255,0.3)",
-                      borderLeft: "1px solid rgba(0,240,255,0.15)",
-                      borderRight: "1px solid rgba(0,240,255,0.15)",
+                          ? "linear-gradient(180deg, #b14dff, #1a0a2e)"
+                          : "linear-gradient(180deg, #1a0a2e, #07030f)",
+                      borderTop: fly ? "2px solid #b14dff" : "1px solid rgba(177,77,255,0.3)",
+                      borderLeft: "1px solid rgba(177,77,255,0.15)",
+                      borderRight: "1px solid rgba(177,77,255,0.15)",
                       animation: fly
                         ? `slide-in-right 1.4s cubic-bezier(.4,.1,.3,1) ${delay}s both, float-y ${3 + (i % 3)}s ease-in-out ${delay + 1.2}s infinite`
                         : `vanish-up 0.8s ease-out ${delay}s both`,
                       transform: fly ? `translateY(-${20 + (i % 4) * 5}vh) rotate(${(i % 5) - 2}deg)` : undefined,
-                      boxShadow: fly ? "0 0 20px rgba(0,240,255,0.6)" : undefined,
+                      boxShadow: fly ? "0 0 20px rgba(177,77,255,0.6)" : undefined,
                     }}
                   />
                 );

@@ -46,7 +46,7 @@ export default function Slide11MoneyGap() {
         <div className="flex justify-center h-full"
              style={{ animation: "slide-in-right 1.2s cubic-bezier(.2,.7,.2,1) 0.4s both" }}>
           <div className="relative h-[42vh] flex items-center">
-            <DnaStrand color="#5a6a9a" />
+            <DnaStrand color="#7d6a9e" />
             <div className="absolute -bottom-[5vh] left-1/2 -translate-x-1/2 font-mono text-[1vw] text-muted uppercase tracking-[0.35em] whitespace-nowrap">Standard</div>
           </div>
         </div>
@@ -57,11 +57,11 @@ export default function Slide11MoneyGap() {
         <svg viewBox="0 0 200 800" className="w-full h-full" preserveAspectRatio="none">
           <path
             d="M100 0 L120 80 L80 180 L130 280 L70 380 L120 480 L80 580 L110 680 L90 800"
-            stroke="#00f0ff"
+            stroke="#b14dff"
             strokeWidth="4"
             fill="none"
             strokeDasharray="1500"
-            style={{ animation: "crack-grow 2s ease-out 1.2s both", filter: "drop-shadow(0 0 14px #00f0ff)" }}
+            style={{ animation: "crack-grow 2s ease-out 1.2s both", filter: "drop-shadow(0 0 14px #b14dff)" }}
           />
         </svg>
       </div>

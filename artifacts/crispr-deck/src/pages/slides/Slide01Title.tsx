@@ -35,9 +35,9 @@ function DoubleHelix() {
     <svg viewBox="0 0 400 400" className="w-full h-full">
       <defs>
         <linearGradient id="strandA" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#00f0ff" stopOpacity="0.2" />
-          <stop offset="50%" stopColor="#00f0ff" stopOpacity="1" />
-          <stop offset="100%" stopColor="#00f0ff" stopOpacity="0.2" />
+          <stop offset="0%" stopColor="#b14dff" stopOpacity="0.2" />
+          <stop offset="50%" stopColor="#b14dff" stopOpacity="1" />
+          <stop offset="100%" stopColor="#b14dff" stopOpacity="0.2" />
         </linearGradient>
         <linearGradient id="strandB" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#ffffff" stopOpacity="0.2" />
@@ -45,8 +45,8 @@ function DoubleHelix() {
           <stop offset="100%" stopColor="#ffffff" stopOpacity="0.2" />
         </linearGradient>
         <radialGradient id="nodeGlow">
-          <stop offset="0%" stopColor="#00f0ff" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="#00f0ff" stopOpacity="0" />
+          <stop offset="0%" stopColor="#b14dff" stopOpacity="0.6" />
+          <stop offset="100%" stopColor="#b14dff" stopOpacity="0" />
         </radialGradient>
       </defs>
 
@@ -57,7 +57,7 @@ function DoubleHelix() {
         stroke="url(#strandA)"
         strokeWidth="3"
         strokeLinecap="round"
-        style={{ filter: "drop-shadow(0 0 8px #00f0ff)" }}
+        style={{ filter: "drop-shadow(0 0 8px #b14dff)" }}
       />
       {/* backbone strand B (white) */}
       <path
@@ -81,7 +81,7 @@ function DoubleHelix() {
             y1={r.y}
             x2={r.x2}
             y2={r.y}
-            stroke="#00f0ff"
+            stroke="#b14dff"
             strokeWidth={width}
             opacity={opacity}
           />
@@ -97,7 +97,7 @@ function DoubleHelix() {
         return (
           <g key={`nodes-${r.i}`}>
             <circle cx={r.x1} cy={r.y} r={radiusA + 6} fill="url(#nodeGlow)" opacity={frontA * 0.7} />
-            <circle cx={r.x1} cy={r.y} r={radiusA} fill="#00f0ff" opacity={0.5 + frontA * 0.5} />
+            <circle cx={r.x1} cy={r.y} r={radiusA} fill="#b14dff" opacity={0.5 + frontA * 0.5} />
             <circle cx={r.x2} cy={r.y} r={radiusB} fill="#ffffff" opacity={0.5 + frontB * 0.5} />
           </g>
         );

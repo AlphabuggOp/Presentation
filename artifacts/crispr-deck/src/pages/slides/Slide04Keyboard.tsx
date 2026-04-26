@@ -19,7 +19,7 @@ export default function Slide04Keyboard() {
                 {row.map((k) => (
                   <div key={k}
                        className={`aspect-square rounded-[0.4vw] flex items-center justify-center font-mono text-[1.2vw] ${k === "F" ? "bg-primary text-bg font-bold" : "bg-bg/60 text-text/70 border border-primary/15"}`}
-                       style={k === "F" ? { animation: "pulse-glow 1.4s ease-in-out infinite", boxShadow: "0 0 30px #00f0ff" } : undefined}>
+                       style={k === "F" ? { animation: "pulse-glow 1.4s ease-in-out infinite", boxShadow: "0 0 30px #b14dff" } : undefined}>
                     {k}
                   </div>
                 ))}
@@ -27,7 +27,7 @@ export default function Slide04Keyboard() {
             ))}
             <div className="grid grid-cols-[1.4fr_3fr_1.4fr_1fr_1fr] gap-[0.5vw]">
               <div className="rounded-[0.4vw] bg-primary text-bg font-mono font-bold text-[1vw] py-[1vw] flex items-center justify-center cyan-shadow"
-                   style={{ animation: "pulse-glow 1.4s ease-in-out infinite", boxShadow: "0 0 30px #00f0ff" }}>
+                   style={{ animation: "pulse-glow 1.4s ease-in-out infinite", boxShadow: "0 0 30px #b14dff" }}>
                 CTRL
               </div>
               <div className="rounded-[0.4vw] bg-bg/60 border border-primary/15" />

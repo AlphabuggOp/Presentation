@@ -32,14 +32,14 @@ export default function Slide07Puzzle() {
               <svg viewBox="0 0 200 100" className="h-full">
                 <defs>
                   <linearGradient id={`pz${i}`} x1="0" x2="1" y1="0" y2="1">
-                    <stop offset="0%" stopColor="#00f0ff" stopOpacity="0.9" />
-                    <stop offset="100%" stopColor="#00f0ff" stopOpacity="0.2" />
+                    <stop offset="0%" stopColor="#b14dff" stopOpacity="0.9" />
+                    <stop offset="100%" stopColor="#b14dff" stopOpacity="0.2" />
                   </linearGradient>
                 </defs>
                 <path
                   d="M10 10 L80 10 Q80 30 100 30 Q120 30 120 10 L190 10 L190 90 L120 90 Q120 70 100 70 Q80 70 80 90 L10 90 Z"
                   fill={i === 1 ? "transparent" : `url(#pz${i})`}
-                  stroke="#00f0ff"
+                  stroke="#b14dff"
                   strokeWidth="2"
                   strokeDasharray={i === 1 ? "4 4" : "0"}
                 />

@@ -9,11 +9,11 @@ export default function Slide08Hero() {
         {/* Left: medical hero figure */}
         <div className="relative flex items-end justify-center"
              style={{ animation: "morph-in 1.4s cubic-bezier(.2,.7,.2,1) both" }}>
-          <svg viewBox="0 0 300 500" className="h-[68vh]" style={{ filter: "drop-shadow(0 0 20px rgba(0,240,255,0.5))" }}>
+          <svg viewBox="0 0 300 500" className="h-[68vh]" style={{ filter: "drop-shadow(0 0 20px rgba(177,77,255,0.5))" }}>
             <defs>
               <linearGradient id="figG" x1="0" y1="0" x2="0" y2="1">
                 <stop offset="0%" stopColor="#ffffff" />
-                <stop offset="100%" stopColor="#00f0ff" />
+                <stop offset="100%" stopColor="#b14dff" />
               </linearGradient>
             </defs>
             {/* Cane that fades out */}

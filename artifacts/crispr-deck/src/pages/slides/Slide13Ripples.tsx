@@ -13,13 +13,13 @@ export default function Slide13Ripples() {
             className="absolute inset-0 rounded-full border-2 border-primary"
             style={{
               animation: `ripple 4.5s cubic-bezier(.2,.7,.3,1) ${i * 0.7}s infinite`,
-              boxShadow: "0 0 20px rgba(0,240,255,0.6)",
+              boxShadow: "0 0 20px rgba(177,77,255,0.6)",
             }}
           />
         ))}
         {/* Drop point */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1.5vw] h-[1.5vw] rounded-full bg-primary cyan-shadow"
-             style={{ animation: "pulse-glow 1.6s ease-in-out infinite", boxShadow: "0 0 40px #00f0ff" }} />
+             style={{ animation: "pulse-glow 1.6s ease-in-out infinite", boxShadow: "0 0 40px #b14dff" }} />
       </div>
 
       <div className="absolute top-[8vh] left-[6vw] z-20"

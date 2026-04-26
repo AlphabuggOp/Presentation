@@ -36,14 +36,14 @@ export default function Slide02Galaxy() {
         <svg viewBox="0 0 400 400" className="w-full h-full">
           <defs>
             <radialGradient id="cellNuc" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stopColor="#00f0ff" stopOpacity="0.95" />
+              <stop offset="0%" stopColor="#b14dff" stopOpacity="0.95" />
               <stop offset="50%" stopColor="#0066aa" stopOpacity="0.6" />
-              <stop offset="100%" stopColor="#060a1f" stopOpacity="0" />
+              <stop offset="100%" stopColor="#07030f" stopOpacity="0" />
             </radialGradient>
             <radialGradient id="membrane" cx="50%" cy="50%" r="50%">
-              <stop offset="78%" stopColor="#00f0ff" stopOpacity="0" />
-              <stop offset="92%" stopColor="#00f0ff" stopOpacity="0.9" />
-              <stop offset="100%" stopColor="#00f0ff" stopOpacity="0" />
+              <stop offset="78%" stopColor="#b14dff" stopOpacity="0" />
+              <stop offset="92%" stopColor="#b14dff" stopOpacity="0.9" />
+              <stop offset="100%" stopColor="#b14dff" stopOpacity="0" />
             </radialGradient>
           </defs>
           <circle cx="200" cy="200" r="195" fill="url(#membrane)" />
@@ -56,7 +56,7 @@ export default function Slide02Galaxy() {
               rx="180"
               ry="55"
               fill="none"
-              stroke="rgba(0,240,255,0.25)"
+              stroke="rgba(177,77,255,0.25)"
               strokeWidth="1"
               transform={`rotate(${i * 30} 200 200)`}
             />

@@ -13,12 +13,12 @@
 }
 
 :root {
-  --slide-bg: #060a1f;
-  --slide-deep: #0a1030;
-  --slide-primary: #00f0ff;
+  --slide-bg: #07030f;
+  --slide-deep: #1a0a2e;
+  --slide-primary: #b14dff;
   --slide-accent: #ffffff;
-  --slide-text: #e8f4ff;
-  --slide-muted: #5a6a9a;
+  --slide-text: #f0e3ff;
+  --slide-muted: #7d6a9e;
   --font-display-family: "Space Grotesk", system-ui, sans-serif;
   --font-body-family: "Space Grotesk", system-ui, sans-serif;
   --font-mono-family: "JetBrains Mono", ui-monospace, monospace;
@@ -147,16 +147,16 @@ body {
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(0,240,255,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,240,255,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(177,77,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(177,77,255,0.06) 1px, transparent 1px);
   background-size: 4vw 4vw;
 }
 .bg-radial-glow {
-  background: radial-gradient(ellipse at center, rgba(0,240,255,0.18) 0%, rgba(6,10,31,0) 60%);
+  background: radial-gradient(ellipse at center, rgba(177,77,255,0.18) 0%, rgba(7,3,15,0) 60%);
 }
 .text-glow {
-  text-shadow: 0 0 20px rgba(0,240,255,0.55), 0 0 40px rgba(0,240,255,0.25);
+  text-shadow: 0 0 20px rgba(177,77,255,0.55), 0 0 40px rgba(177,77,255,0.25);
 }
 .cyan-shadow {
-  box-shadow: 0 0 0 1px rgba(0,240,255,0.4), 0 0 30px rgba(0,240,255,0.25);
+  box-shadow: 0 0 0 1px rgba(177,77,255,0.4), 0 0 30px rgba(177,77,255,0.25);
 }
