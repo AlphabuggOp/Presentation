@@ -1,0 +1,122 @@
+[
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2001",
+    "position": 1,
+    "filepath": "src/pages/slides/Slide01Title.tsx",
+    "title": "CRISPR — The Hook",
+    "description": "Title slide with spinning DNA strand and the hook quote.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2002",
+    "position": 2,
+    "filepath": "src/pages/slides/Slide02Galaxy.tsx",
+    "title": "Galaxy to Cell",
+    "description": "Zooming from a galaxy down to a single cell.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2003",
+    "position": 3,
+    "filepath": "src/pages/slides/Slide03Library.tsx",
+    "title": "DNA: Instruction Manual",
+    "description": "Library backdrop with books flying off shelves.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2004",
+    "position": 4,
+    "filepath": "src/pages/slides/Slide04Keyboard.tsx",
+    "title": "Find and Replace",
+    "description": "Keyboard with Ctrl+F highlighted; CRISPR as nature's find-and-replace.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2005",
+    "position": 5,
+    "filepath": "src/pages/slides/Slide05Cas9.tsx",
+    "title": "Cas9 — The Scissors",
+    "description": "Cas9 scissors floating in and snipping.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2006",
+    "position": 6,
+    "filepath": "src/pages/slides/Slide06GuideRNA.tsx",
+    "title": "Guide RNA — The GPS",
+    "description": "Map aligning to a DNA strand as the GPS for the scissors.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2007",
+    "position": 7,
+    "filepath": "src/pages/slides/Slide07Puzzle.tsx",
+    "title": "Locate. Snip. Fix.",
+    "description": "Three steps shown as puzzle pieces being swapped.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2008",
+    "position": 8,
+    "filepath": "src/pages/slides/Slide08Hero.tsx",
+    "title": "Cures: Sickle Cell and Blindness",
+    "description": "Medical hero figure standing taller as the cane fades out.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2009",
+    "position": 9,
+    "filepath": "src/pages/slides/Slide09Mosquito.tsx",
+    "title": "Editing Nature: Malaria",
+    "description": "Mosquito icon morphing into a no symbol.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2010",
+    "position": 10,
+    "filepath": "src/pages/slides/Slide10Designer.tsx",
+    "title": "The Designer Menu",
+    "description": "Trait icons growing and shrinking. EDIT mnemonic.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2011",
+    "position": 11,
+    "filepath": "src/pages/slides/Slide11MoneyGap.tsx",
+    "title": "The Money Gap",
+    "description": "Golden DNA versus gray DNA with a crack appearing.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2012",
+    "position": 12,
+    "filepath": "src/pages/slides/Slide12Justice.tsx",
+    "title": "Lab Coat vs. Gavel",
+    "description": "Tipping scale of justice between scientists and lawmakers.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2013",
+    "position": 13,
+    "filepath": "src/pages/slides/Slide13Ripples.tsx",
+    "title": "The Butterfly Effect",
+    "description": "Ripples spreading across the slide.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2014",
+    "position": 14,
+    "filepath": "src/pages/slides/Slide14Cure.tsx",
+    "title": "Summary: C.U.R.E.",
+    "description": "Cut, Understand, Rewrite, Evolve mnemonic summary.",
+    "speakerNotes": ""
+  },
+  {
+    "id": "5b1a8a90-1f3c-4a5e-9e1f-0b1a4f1e2015",
+    "position": 15,
+    "filepath": "src/pages/slides/Slide15Thumbprint.tsx",
+    "title": "Mic Drop: The Code Is Written",
+    "description": "Thumbprint made of stars with the closing question.",
+    "speakerNotes": ""
+  }
+]

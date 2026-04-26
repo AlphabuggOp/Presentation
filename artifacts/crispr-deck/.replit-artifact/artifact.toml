@@ -1,0 +1,31 @@
+kind = "slides"
+previewPath = "/"
+title = "CRISPR: The Pen to Our Own Story"
+version = "1.0.0"
+id = "artifacts/crispr-deck"
+router = "path"
+
+[[integratedSkills]]
+name = "slides"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18199
+
+[services.development]
+run = "pnpm --filter @workspace/crispr-deck run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/crispr-deck", "run", "build" ]
+publicDir = "artifacts/crispr-deck/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18199"
+BASE_PATH = "/"

@@ -1,0 +1,150 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: var(--slide-primary);
+  --color-accent: var(--slide-accent);
+  --color-bg: var(--slide-bg);
+  --color-text: var(--slide-text);
+  --color-muted: var(--slide-muted);
+  --color-deep: var(--slide-deep);
+  --font-display: var(--font-display-family);
+  --font-body: var(--font-body-family);
+  --font-mono: var(--font-mono-family);
+}
+
+:root {
+  --slide-bg: #060a1f;
+  --slide-deep: #0a1030;
+  --slide-primary: #00f0ff;
+  --slide-accent: #ffffff;
+  --slide-text: #e8f4ff;
+  --slide-muted: #5a6a9a;
+  --font-display-family: "Space Grotesk", system-ui, sans-serif;
+  --font-body-family: "Space Grotesk", system-ui, sans-serif;
+  --font-mono-family: "JetBrains Mono", ui-monospace, monospace;
+  color-scheme: dark;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--slide-bg);
+  color: var(--slide-text);
+  font-family: var(--font-body-family);
+}
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide-viewer {
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes spin-rev {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 8px var(--slide-primary)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 28px var(--slide-primary)); }
+}
+@keyframes morph-in {
+  0% { transform: scale(0.05); opacity: 0; filter: blur(20px); }
+  60% { opacity: 1; filter: blur(0); }
+  100% { transform: scale(1); opacity: 1; filter: blur(0); }
+}
+@keyframes morph-zoom {
+  0% { transform: scale(0.2); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes vanish-up {
+  0% { opacity: 0; transform: translateY(2vh); letter-spacing: 0.4em; filter: blur(8px); }
+  100% { opacity: 1; transform: translateY(0); letter-spacing: 0; filter: blur(0); }
+}
+@keyframes scan-line {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(2000%); }
+}
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-1.5vh); }
+}
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 0.9; }
+  100% { transform: scale(4); opacity: 0; }
+}
+@keyframes type-cursor {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+@keyframes draw-line {
+  from { stroke-dashoffset: 1000; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes crack-grow {
+  0% { stroke-dashoffset: 1500; opacity: 0; }
+  20% { opacity: 1; }
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+@keyframes slide-in-left {
+  0% { opacity: 0; transform: translateX(-4vw); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes slide-in-right {
+  0% { opacity: 0; transform: translateX(4vw); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+@keyframes scale-out {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(0); opacity: 0; }
+}
+@keyframes scale-in {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes tilt-left {
+  0% { transform: rotate(0); }
+  60% { transform: rotate(-18deg); }
+  100% { transform: rotate(-12deg); }
+}
+@keyframes butterfly {
+  0%, 100% { transform: translate(0,0) rotate(0); }
+  25% { transform: translate(8vw,-4vh) rotate(8deg); }
+  50% { transform: translate(20vw,2vh) rotate(-4deg); }
+  75% { transform: translate(28vw,-6vh) rotate(10deg); }
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(0,240,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,240,255,0.06) 1px, transparent 1px);
+  background-size: 4vw 4vw;
+}
+.bg-radial-glow {
+  background: radial-gradient(ellipse at center, rgba(0,240,255,0.18) 0%, rgba(6,10,31,0) 60%);
+}
+.text-glow {
+  text-shadow: 0 0 20px rgba(0,240,255,0.55), 0 0 40px rgba(0,240,255,0.25);
+}
+.cyan-shadow {
+  box-shadow: 0 0 0 1px rgba(0,240,255,0.4), 0 0 30px rgba(0,240,255,0.25);
+}
