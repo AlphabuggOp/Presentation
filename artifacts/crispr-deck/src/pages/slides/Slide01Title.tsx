@@ -128,8 +128,9 @@ export default function Slide01Title() {
       <SlideChrome index="01" />
 
       <div
-        className="absolute -right-[12vw] top-1/2 w-[40vw] h-[130vh] pointer-events-none"
+        className="absolute top-1/2 w-[40vw] h-[130vh] pointer-events-none"
         style={{
+          right: "calc(-12vw + 50px)",
           transform: "translateY(-50%) rotate(22deg)",
           transformOrigin: "50% 50%",
         }}
