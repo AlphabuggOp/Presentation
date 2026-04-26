@@ -90,7 +90,7 @@ function DoubleHelix() {
         {[...items]
           .sort((a, b) => a.depthA - b.depthA)
           .map((r) => {
-            const radius = 9 + r.depthA * 9;
+            const radius = 5 + r.depthA * 6;
             return (
               <circle
                 key={`a-${r.i}`}
@@ -105,7 +105,7 @@ function DoubleHelix() {
         {[...items]
           .sort((a, b) => a.depthB - b.depthB)
           .map((r) => {
-            const radius = 9 + r.depthB * 9;
+            const radius = 5 + r.depthB * 6;
             return (
               <circle
                 key={`b-${r.i}`}
@@ -128,7 +128,11 @@ export default function Slide01Title() {
       <SlideChrome index="01" />
 
       <div
-        className="absolute right-[6vw] top-1/2 -translate-y-1/2 w-[34vw] h-[110vh] pointer-events-none"
+        className="absolute -right-[12vw] top-1/2 w-[40vw] h-[130vh] pointer-events-none"
+        style={{
+          transform: "translateY(-50%) rotate(22deg)",
+          transformOrigin: "50% 50%",
+        }}
       >
         <div
           className="w-full h-full"
