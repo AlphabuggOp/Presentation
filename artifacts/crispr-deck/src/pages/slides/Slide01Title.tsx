@@ -38,40 +38,39 @@ function DoubleHelix() {
     <svg viewBox="0 0 400 580" className="w-full h-full" preserveAspectRatio="xMidYMid meet">
       <defs>
         <radialGradient id="bead" cx="35%" cy="30%" r="70%">
-          <stop offset="0%" stopColor="#ffffff" />
-          <stop offset="25%" stopColor="#e6c8ff" />
-          <stop offset="60%" stopColor="#b14dff" />
-          <stop offset="100%" stopColor="#3a0a5a" />
+          <stop offset="0%" stopColor="#d59cff" />
+          <stop offset="35%" stopColor="#b14dff" />
+          <stop offset="75%" stopColor="#6a1cb0" />
+          <stop offset="100%" stopColor="#2a0050" />
         </radialGradient>
         <linearGradient id="rungG" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#f0e3ff" />
-          <stop offset="50%" stopColor="#ffffff" />
-          <stop offset="100%" stopColor="#b14dff" />
+          <stop offset="0%" stopColor="#7a2dc4" />
+          <stop offset="50%" stopColor="#c87dff" />
+          <stop offset="100%" stopColor="#5e1aa0" />
         </linearGradient>
-        <filter id="whiteGlow" x="-20%" y="-20%" width="140%" height="140%">
-          <feMorphology operator="dilate" radius="2.2" in="SourceAlpha" result="dilated" />
-          <feGaussianBlur in="dilated" stdDeviation="3" result="outline" />
-          <feFlood floodColor="#ffffff" floodOpacity="1" />
-          <feComposite in2="outline" operator="in" result="glow" />
-          <feGaussianBlur in="SourceAlpha" stdDeviation="10" result="halo" />
-          <feFlood floodColor="#b14dff" floodOpacity="0.6" />
-          <feComposite in2="halo" operator="in" result="purpleHalo" />
+        <filter id="purpleGlow" x="-30%" y="-30%" width="160%" height="160%">
+          <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="halo" />
+          <feFlood floodColor="#b14dff" floodOpacity="0.85" />
+          <feComposite in2="halo" operator="in" result="innerHalo" />
+          <feGaussianBlur in="SourceAlpha" stdDeviation="18" result="halo2" />
+          <feFlood floodColor="#b14dff" floodOpacity="0.5" />
+          <feComposite in2="halo2" operator="in" result="outerHalo" />
           <feMerge>
-            <feMergeNode in="purpleHalo" />
-            <feMergeNode in="glow" />
+            <feMergeNode in="outerHalo" />
+            <feMergeNode in="innerHalo" />
             <feMergeNode in="SourceGraphic" />
           </feMerge>
         </filter>
       </defs>
 
-      <g filter="url(#whiteGlow)">
+      <g filter="url(#purpleGlow)">
         {/* Rungs (base pairs) — drawn first so beads sit on top */}
         {items.map((r) => {
           const span = Math.abs(r.x1 - r.x2);
           if (span < 12) return null;
           const left = Math.min(r.x1, r.x2);
           const midDepth = Math.max(r.depthA, r.depthB);
-          const opacity = 0.35 + midDepth * 0.55;
+          const opacity = 0.45 + midDepth * 0.5;
           const h = 5 + midDepth * 3;
           return (
             <rect
@@ -99,7 +98,7 @@ function DoubleHelix() {
                 cy={r.y}
                 r={radius}
                 fill="url(#bead)"
-                opacity={0.55 + r.depthA * 0.45}
+                opacity={0.6 + r.depthA * 0.4}
               />
             );
           })}
@@ -114,7 +113,7 @@ function DoubleHelix() {
                 cy={r.y}
                 r={radius}
                 fill="url(#bead)"
-                opacity={0.55 + r.depthB * 0.45}
+                opacity={0.6 + r.depthB * 0.4}
               />
             );
           })}
@@ -129,11 +128,7 @@ export default function Slide01Title() {
       <SlideChrome index="01" />
 
       <div
-        className="absolute -right-[10vw] top-1/2 w-[55vw] h-[95vh] pointer-events-none"
-        style={{
-          transform: "translateY(-50%) rotate(18deg)",
-          transformOrigin: "60% 50%",
-        }}
+        className="absolute right-[6vw] top-1/2 -translate-y-1/2 w-[34vw] h-[110vh] pointer-events-none"
       >
         <div
           className="w-full h-full"
