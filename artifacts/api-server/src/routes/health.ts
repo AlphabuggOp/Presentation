@@ -1,7 +1,8 @@
 import { Router } from "express";
+import type { Router as ExpressRouter } from "express";
 import { HealthCheckResponse } from "@workspace/api-zod";
 
-const router: ReturnType<typeof Router> = Router();
+const router: ExpressRouter = Router();
 
 router.get("/healthz", (_req, res) => {
   const data = HealthCheckResponse.parse({ status: "ok" });
