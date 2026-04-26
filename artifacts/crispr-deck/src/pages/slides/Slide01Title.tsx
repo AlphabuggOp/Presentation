@@ -130,7 +130,7 @@ export default function Slide01Title() {
       <div
         className="absolute top-1/2 w-[40vw] h-[130vh] pointer-events-none"
         style={{
-          right: "calc(-12vw + 150px)",
+          right: "calc(-12vw + 175px)",
           transform: "translateY(-50%) rotate(22deg)",
           transformOrigin: "50% 50%",
         }}
