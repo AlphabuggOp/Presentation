@@ -160,3 +160,16 @@ body {
 .cyan-shadow {
   box-shadow: 0 0 0 1px rgba(177,77,255,0.4), 0 0 30px rgba(177,77,255,0.25);
 }
+
+/* Export route: snap entrance animations to their final state so screenshots
+   show fully revealed elements (text, glows, scaled-in icons) instead of
+   capturing them mid-animation. Continuous loops still render their end-state
+   keyframe which is fine for spin/pulse/twinkle. */
+body.allslides-export *,
+body.allslides-export *::before,
+body.allslides-export *::after {
+  animation-delay: 0s !important;
+  animation-duration: 1ms !important;
+  animation-iteration-count: 1 !important;
+  animation-fill-mode: forwards !important;
+}

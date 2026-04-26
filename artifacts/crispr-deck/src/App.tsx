@@ -125,6 +125,12 @@ function SlideEditor() {
 }
 
 function AllSlides() {
+  useEffect(() => {
+    document.body.classList.add("allslides-export");
+    return () => {
+      document.body.classList.remove("allslides-export");
+    };
+  }, []);
   return (
     <div className="bg-black">
       {slides.map((slide) => (

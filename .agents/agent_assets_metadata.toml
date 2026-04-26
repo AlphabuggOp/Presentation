@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "BVA_HAUB9D_LfXVfQzau7"
+uri = "file://.local/outputs/Insightful-Ideas.pptx"
+type = "slides"
+title = "Insightful Ideas.pptx"
