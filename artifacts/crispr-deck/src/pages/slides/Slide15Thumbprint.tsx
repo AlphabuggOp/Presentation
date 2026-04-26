@@ -85,9 +85,8 @@ export default function Slide15Thumbprint() {
 
       <div className="absolute bottom-[10vh] left-[6vw] right-[6vw] z-20 text-center"
            style={{ animation: "vanish-up 1.4s ease-out 1.6s both" }}>
-        <div className="font-display font-bold text-[4.5vw] leading-[0.95] tracking-tight text-glow">
-          The code is written.<br />
-          <span className="text-primary">Who gets the eraser?</span>
+        <div className="font-display font-bold text-[6vw] leading-[0.95] tracking-tight text-glow uppercase">
+          <span className="text-primary">Abort</span> Mission
         </div>
         <div className="mt-[3vh] font-mono text-[0.95vw] text-muted uppercase tracking-[0.4em]">END / TRANSMISSION</div>
       </div>

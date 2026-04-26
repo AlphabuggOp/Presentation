@@ -112,13 +112,21 @@ export default function Slide01Title() {
       <SlideChrome index="01" />
 
       <div
-        className="absolute right-[8vw] top-1/2 -translate-y-1/2 w-[42vw] h-[42vw]"
-        style={{ animation: "morph-in 1.2s cubic-bezier(.2,.7,.2,1) both" }}
+        className="absolute -right-[14vw] top-1/2 w-[78vw] h-[78vw] pointer-events-none"
+        style={{
+          transform: "translateY(-50%) rotate(22deg)",
+          transformOrigin: "60% 50%",
+        }}
       >
-        <DoubleHelix />
+        <div
+          className="w-full h-full"
+          style={{ animation: "morph-in 1.2s cubic-bezier(.2,.7,.2,1) both" }}
+        >
+          <DoubleHelix />
+        </div>
       </div>
 
-      <div className="absolute left-[6vw] top-1/2 -translate-y-1/2 max-w-[55vw] z-20">
+      <div className="absolute left-[6vw] top-1/2 -translate-y-1/2 max-w-[46vw] z-20">
         <div
           className="font-mono text-[0.95vw] text-primary tracking-[0.4em] uppercase mb-[3vh]"
           style={{ animation: "vanish-up 0.9s ease-out both" }}
